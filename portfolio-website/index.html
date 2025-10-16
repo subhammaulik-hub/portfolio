@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="left">Subham Maulik</div>
+                <div class="menu-toggle" id="menu-toggle">
+                    <p>☰</p>
+                </div>
+                <div class="right">
+                    <ul id="nav-links">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="Blogs.html">Blogs</a></li>
+                        <li><a href="project.html">Projects</a></li>
+                        <li><a href="contact.html">Contact Me</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="firstsection">
+                <div class="leftsection">
+                    Hi,my name is <span class="purple"> Subham</span>
+                    <div>and I am a passionate</div>
+                    <span id="element"></span>
+                    <div class="buttons">
+                        <a href="contact.html"><button class="btn">Hire me</button></a>
+                        <a href="cv.jpg" download="cv.jpg"><button class="btn">Download CV</button></a>
+                    </div>
+                </div>
+                <div class="rightsection">
+                    <img src="devoloper.jpg">
+                </div>
+            </section>
+            <hr class="one">
+            <section class="secondsection">
+                <div class="handeler">
+                    <a href="https://www.linkedin.com/in/subham-maulik-24b9b1382/"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/subham_maulik/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/MaulikSubham?t=z3n-OKvQQWbENclaa48k7w&s=09"><i
+                            class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/share/1HbWGmbpMN/"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </section>
+            <div id="date-time"></div>
+        </main>
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script>
+            var typed = new Typed('#element', {
+                strings: ['web developer.', 'web designer.', 'video editor.', 'programmer.'],
+                typeSpeed: 80,
+                backSpeed: 50,
+                backDelay: 1000,
+                loop: true,
+
+            });
+        </script>
+        <script>
+            const toggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+            toggle.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+            });
+        </script>
+        <script>
+            function updateDateTime() {
+                const now = new Date();
+                const date = now.toLocaleDateString();
+                const time = now.toLocaleTimeString();
+                document.getElementById("date-time").innerHTML = `${date} | ${time}`;
+            }
+
+            updateDateTime(); // initial call
+            setInterval(updateDateTime, 1000); // update every second
+        </script>
+
+    </div>
+</body>
+
+</html>

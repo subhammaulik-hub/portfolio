@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>service</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body oncontextmenu=" return false;">
+    <header>
+        <nav>
+            <div class="left">Subham's portfolio</div>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+            <div class="right">
+                <ul id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Blogs.html" class="active">Blogs</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="header-blogs">
+        <h1>Blogs</h1>
+    </div>
+    <div class="blogs-container">
+        <div class="Blogs">
+            <div class="first-div">
+                <div class="blog-img">
+                    <img src="code.webp">
+                </div>
+                <div class="blog-content">
+                    <h1>How I Built My Portfolio Website from Scratch</h1>
+                    <p class="text">
+
+
+
+                        When I first started learning web development, I wanted to create something that truly
+                        represented me. So instead of using a pre-made template, I decided to build my own portfolio
+                        website from scratch — using only HTML, CSS, and JavaScript.
+
+                        The first step was design planning. I sketched a layout that felt clean, modern, and
+                        minimal. I
+                        wanted every section — from “About Me” to “Projects” — to flow naturally. Choosing colors
+                        was a
+                        fun part too; I went for a dark background with soft contrast to make the text and icons
+                        pop.
+                        Then came the real challenge — coding it all together.
+                        <span class="extra">
+                            I structured everything in HTML, styled with responsive CSS, and added interactivity through
+                            JavaScript. To make the text animation smooth, I used Type.js, which cycles through
+                            different
+                            titles like “Developer”, “Designer”, “Learner”. The toughest part was ensuring the site
+                            looked
+                            great on both laptops and mobiles — but learning how to make layouts responsive gave me a
+                            lot of
+                            confidence.
+
+                            Seeing my ideas come alive in the browser was one of the most satisfying moments. My
+                            portfolio
+                            is still evolving, but every change reflects how much I’ve grown as a developer. Adding a
+                            blog
+                            section was my next step — a space where I can share what I’m learning and creating.
+                        </span>
+                    </p>
+                    <button class="read-btn">Read more</button>
+                </div>
+            </div>
+            <hr class="two">
+            <div class="second-div">
+                <div class="blog-img">
+                    <img src="code2.jpg">
+                </div>
+                <div class="blog-content">
+                    <h1>Balancing Code and Life: How I Stay Productive and Happy</h1>
+                    <p class="text">
+                        As a computer engineering student who spends hours coding, I’ve realized that balance is the key
+                        to staying productive and creative. It’s easy to get lost in endless lines of code, but I make
+                        sure to step away sometimes — to play cricket, strum my guitar, or just spend time outdoors.
+
+                        Cricket helps me clear my head. It teaches teamwork and focus — skills that surprisingly
+                        translate well into coding. On the other hand, guitar gives me a creative outlet; whenever I
+                        play, it reminds me that rhythm and logic can coexist beautifully.
+                        <span class="extra">
+                            I try to follow a simple routine: study and code during focused hours, take short breaks,
+                            and dedicate evenings to something non-digital. These small breaks reset my mind and help me
+                            return to projects with fresh ideas.
+
+                            For me, coding isn’t just about solving problems — it’s also about enjoying the process. And
+                            that’s only possible when I keep a healthy balance between technology and real life.
+                        </span>
+                    </p>
+                    <button class="read-btn">Read more</button>
+                </div>
+            </div>
+            <hr class="two">
+            <div class="third-div">
+                <div class="blog-img">
+                    <img src="code1.jpg">
+                </div>
+                <div class="blog-content">
+                    <h1>Why I Started Learning Web Development (and Why I Love It)</h1>
+                    <p class="text">
+                        My journey into web development began with curiosity. I was always fascinated by how websites
+                        worked — how a few lines of code could turn into something visual and interactive. During my
+                        early days in computer engineering, I started experimenting with HTML and CSS, and that’s where
+                        it all began.
+
+                        At first, I struggled — layouts broke, colors mismatched, and sometimes nothing displayed at
+                        all. But every bug I fixed gave me a sense of achievement. Slowly, I started to understand the
+                        logic behind structure and styling. Learning JavaScript made everything even more exciting; it
+                        felt like giving life to static pages.
+                        <span class="extra">
+                            What I love most about web development is that it combines logic and creativity. I can
+                            design something beautiful and still make it functional with code. Every new project teaches
+                            me something — about design, patience, and problem-solving.
+
+                            Looking ahead, I want to keep improving — learning modern frameworks, exploring backend
+                            development, and maybe even building tools that help others learn to code. Web development
+                            isn’t just a skill anymore — it’s become my way of expressing ideas.
+                        </span>
+                    </p>
+                    <button class="read-btn">Read more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        toggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        const buttons = document.querySelectorAll('.read-btn');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const extraText = btn.previousElementSibling.querySelector('.extra');
+
+                if (extraText.style.display === 'inline') {
+                    extraText.style.display = 'none';
+                    btn.textContent = 'Read more';
+                } else {
+                    extraText.style.display = 'inline';
+                    btn.textContent = 'Read less';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

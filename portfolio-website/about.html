@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body oncontextmenu=" return false;">
+    <header>
+        <nav>
+            <div class="left">Subham's portfolio</div>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+            <div class="right">
+                <ul id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="Blogs.html">Blogs</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="about">
+        <div class="edu">
+            <div class="heading">
+                <div class="ed-icon"><i class="fa-solid fa-trophy fa-xl" style="color:rgba(127, 49, 228, 0.962)"></i>
+                </div>
+                <h1>Education:</h1>
+            </div>
+            <div class="ul">
+                <ul>
+                    <li>Bachelor of technology in CSE,GNIT(2028)</li>
+                    <li>Higher Secondary(Science),Udaypur Haradayal Nag Vidyalaya(2024)</li>
+                    <li>Madhyamik,Baranagore Ramakrishna Mission Ashrama High School(2022)</li>
+                </ul>
+            </div>
+            <hr class="two">
+        </div>
+
+        <div class="Highlights">
+            <div class="heading">
+                <div class="ed-icon"><i class="fa-solid fa-user-graduate fa-xl"
+                        style="color:rgba(127, 49, 228, 0.962)"></i></div>
+                <h1>Key Achievements / Highlights:</h1>
+            </div>
+            <div class="ul">
+                <ul>
+                    <li>82% in Madhyamik</li>
+                    <li>84% in Higher Secondary</li>
+                </ul>
+            </div>
+            <hr class="two">
+        </div>
+
+        <div class="Goal">
+            <div class="heading">
+                <div class="ed-icon"><i class="fa-solid fa-crosshairs fa-xl"
+                        style="color:rgba(127, 49, 228, 0.962)"></i>
+                </div>
+                <h1>Future Goals:</h1>
+            </div>
+            <div class="ul">
+                <ul>
+                    <li>Looking to build impactful UI</li>
+                    <li>exploring AI powered applications</li>
+                </ul>
+            </div>
+            <hr class="two">
+        </div>
+    </div>
+    <div class="personality">
+        <h1>My personality:</h1>
+        <p>I’m more of an introvert, someone who feels energized through reflection and personal space rather than
+            constant socializing. I prefer meaningful conversations over small talk.
+
+            When it comes to decisions, I rely on logic and facts—I like to analyze things clearly before choosing a
+            direction. At the same time, I’m flexible and spontaneous in my work and studies, adapting quickly when
+            situations change.
+
+            My interests reflect both creativity and strategy. I love coding because it challenges my problem-solving
+            skills, playing cricket because it teaches teamwork and discipline, and playing guitar because it lets me
+            express myself artistically.
+
+            Even under pressure, I usually stay calm and composed, which helps me think clearly and handle challenges
+            without losing balance.
+
+            Overall, I see myself as a thoughtful, logical, and adaptable person who values creativity, independence,
+            and resilience.</p>
+
+    </div>
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        toggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+
+</body>
+
+</html>
